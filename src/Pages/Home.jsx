@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import bgVid from "../Media/Videos/bgVis.mp4";
-import WelcomeMsg from "./WelcomeMsg";
+import WelcomeMsg from "../Components/WelcomeMsg";
 import { gsap } from "gsap/gsap-core";
 
 const Home = () => {
@@ -11,19 +11,23 @@ const Home = () => {
     text.textContent = "";
 
     let chars = textContent.split("");
-    chars.forEach((char, index) => {
-      const charElement = document.createElement("span");
-      charElement.textContent = char;
-      charElement.style.opacity = 0;
-      text.appendChild(charElement);
+    setTimeout(() => {
+      chars.forEach((char, index) => {
+        const charElement = document.createElement("span");
+        charElement.textContent = char;
+        charElement.style.opacity = 0;
+        text.appendChild(charElement);
 
-      gsap.to(charElement, {
-        opacity: 1,
-        duration: 0.8,
-        delay: index * 0.1,
+        gsap.to(charElement, {
+          opacity: 1,
+          backgroundColor: "rgba(0, 0, 0, 0.667)",
+          duration: 0.1,
+          delay: index * 0.1,
+        });
       });
-    });
+    }, 4000);
   }, []);
+
   return (
     <>
       <div className="homeCont">
@@ -47,9 +51,6 @@ const Home = () => {
           winning sequences while blocking their opponent's attempts to do the
           same. The game is simple, yet it offers a variety of strategic
           possibilities, making it a timeless and widely enjoyed pastime.
-        </div>
-        <div className="footer">
-          <footer>Copyright &copy; Zaid Kamboo 2023-24</footer>
         </div>
       </div>
     </>
