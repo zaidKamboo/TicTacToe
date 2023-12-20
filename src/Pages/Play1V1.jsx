@@ -288,9 +288,9 @@ const Play1V1 = () => {
                 )}
               </>
             )}
-            <button className="playAgain" onClick={resetGame}>
+            {/* <button className="playAgain" onClick={resetGame}>
               Play again
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

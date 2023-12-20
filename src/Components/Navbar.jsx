@@ -16,16 +16,10 @@ const Navbar = ({ toggleDrawer, toggleDrawerSideBar }) => {
       <div className="navbarContainer">
         <nav className="navbar">
           <div className="navbarMobileContainer">
-            <div className="playGameDiv">
+            <Link to="/playGame" className="playGame">
               <IoGameControllerOutline className="gameIcon" />
-              <Link
-                to="/playGame"
-                className="playGame"
-                style={{ marginLeft: "0vw" }}
-              >
-                Play ? Tic Tac Toe
-              </Link>
-            </div>
+              <p className="gameText">Play ? Tic Tac Toe</p>
+            </Link>
             <div className="hamburgerParent">
               <div className="hamburger" onClick={() => toggleDrawer()}>
                 <p></p>

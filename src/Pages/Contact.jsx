@@ -98,7 +98,7 @@ const Contact = () => {
             placeholder="Your Message"
             required
             minLength={5}
-            maxLength={25}
+            // maxLength={25}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>

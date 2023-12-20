@@ -34,9 +34,9 @@ const WelcomeMsg = () => {
       <h5
         ref={textRef}
         className="welcomeMsg"
-        data-text="Welcome to the world of Tic tac toe."
+        data-text="Welcome to the world of Tic tac toe!"
       >
-        Welcome to the world of Tic tac toe.
+        Welcome to the world of Tic tac toe!
       </h5>
     </div>
   );

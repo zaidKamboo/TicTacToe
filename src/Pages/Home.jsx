@@ -20,7 +20,7 @@ const Home = () => {
 
         gsap.to(charElement, {
           opacity: 1,
-          backgroundColor: "rgba(0, 0, 0, 0.667)",
+          backgroundColor: "rgba(0, 0, 0, 0.867)",
           duration: 0.1,
           delay: index * 0.1,
         });
